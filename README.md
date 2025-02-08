@@ -41,7 +41,11 @@ _Below is a demo of getting JWT access tokens from the OneNote process `onenotei
 - Then view it locally with `cat`/`vi`/`more`/`less`/`grep`/etc
 ```bash
 0xBoku@kamehameha:~/Desktop/out$ cat memstrings.bin | grep ey
-ope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header><Header xmlns="http://schemas.microsoft.com/office/roamingservice"><ClientInfo xmlns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.SoapObjects"><Client>RS_ImmersiveCache</Client><ClientVersion>16.0.14326.22094</ClientVersion><Protocol>1.0</Protocol></ClientInfo></Header></s:Header><s:Body><a:WriteSettingsRequest xmlns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.SoapObjects" xmlns:a="http://schemas.microsoft.com/office/roamingservice"><a:Identity>eyJ0eXAiOiJKV1QiLCJub25jZSI6IjNtYlJlU2FETWpBM2ZrY1B6cnBVclRBZzM1ZG1qYnFzbHVIbkZMdzdkTkUiLCJhbGciOiJSUzI1NiIsIng1dCI6IllUY2VPNUlKeXlxUjZqekRTNWlBYnBlNDJKdyIsImtpZCI6IllUY2VPNUlKeXlxUjZqekRTNWlBYnBlNDJKdyJ9.eyJhdWQiOiJo..
+ope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Header>
+<Header xmlns="http://schemas.microsoft.com/office/roamingservice">
+<ClientInfo xmlns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.SoapObjects"<Client>RS_ImmersiveCache</Client><ClientVersion>16.0.14326.22094</ClientVersion><Protocol>1.0</Protocol></ClientInfo></Header></s:Header><s:Body><a:WriteSettingsRequest
+xmlns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.SoapObjects"xmlns:a="http://schemas.microsoft.com/office/roamingservice">
+<a:Identity>eyJ0eXAiOiJKV1QiLCJub25jZSI6IjNtYlJlU2FETWpBM2ZrY1B6cnBVclRBZzM1ZG1qYnFzbHVIbkZMdzdkTkUiLCJhbGciOiJSUzI1NiIsIng1dCI6IllUY2VPNUlKeXlxUjZqekRTNWlBYnBlNDJKdyIsImtpZCI6IllUY2VPNUlKeXlxUjZqekRTNWlBYnBlNDJKdyJ9.eyJhdWQiOiJo..
 ```
 
 
