@@ -1,5 +1,5 @@
 # StringReaper 
-_Reaping treasures from strings in remote processes memory_
+_Reaping treasures from strings in remote process memory_
 ![](./images/stringreaper.png)
 
 CobaltStrike BOF designed to carve strings out of remote process memory. This tool allows operators to carve ASCII and UTF-16 strings from targeted processes, making it effective for retrieving JWT tokens, credentials, and other sensitive data directly from memory. Over the past 3 years i've had great success in using this tool on engagements. Saves time when oping from a C2 where you don't want to have to wait on a full process dump or deal with download size issues.
